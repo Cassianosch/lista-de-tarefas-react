@@ -1,0 +1,28 @@
+@import './cores.scss';
+@import './fontes.scss';
+@import './helpers.scss';
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.principal {
+    background-color: $cor-background-principal;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    &::after {
+        content: '';
+        background-color: $cor-branco;
+        height: 50vh;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}
