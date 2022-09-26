@@ -1,7 +1,5 @@
 import React from "react";
 
-const Listagem = () => {
+export const Listagem = () => {
   return <h1>Listagem</h1>;
 };
-
-export default Listagem;

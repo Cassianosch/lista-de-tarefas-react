@@ -1,1 +1,1 @@
-export { default } from "./Corpo";
+export { Corpo } from "./Corpo";

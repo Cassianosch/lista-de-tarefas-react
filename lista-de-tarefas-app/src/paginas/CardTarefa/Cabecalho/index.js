@@ -1,1 +1,1 @@
-export { default } from "./Cabecalho";
+export { Cabecalho } from "./Cabecalho";

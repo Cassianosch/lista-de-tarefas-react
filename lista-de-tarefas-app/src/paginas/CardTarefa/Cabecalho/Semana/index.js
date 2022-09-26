@@ -1,1 +1,1 @@
-export { default } from "./Semana";
+export { Semana } from "./Semana";

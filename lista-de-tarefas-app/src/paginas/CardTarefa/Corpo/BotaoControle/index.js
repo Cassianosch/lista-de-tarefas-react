@@ -1,1 +1,1 @@
-export { default } from "./BotaoControle";
+export { BotaoControle } from "./BotaoControle";
