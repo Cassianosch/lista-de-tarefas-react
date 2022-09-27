@@ -1,7 +1,15 @@
 import React from "react";
+import { Cabecalho } from "./Cabecalho";
+import { Corpo } from "./Corpo";
+import "./estilos.scss";
 
 const CardTarefa = () => {
-  return <h1>CardTarefa</h1>;
+  return (
+    <>
+      <Cabecalho />
+      <Corpo />
+    </>
+  );
 };
 
 export default CardTarefa;

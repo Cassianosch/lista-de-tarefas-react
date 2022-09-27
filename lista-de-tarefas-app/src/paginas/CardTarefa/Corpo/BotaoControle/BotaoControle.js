@@ -1,5 +1,11 @@
 import React from "react";
+import "./estilos.scss";
 
 export const BotaoControle = () => {
-  return <h1>BotaoControle</h1>;
+  return (
+    <section className="caixa__botao mostrar">
+      <input type="text" />
+      <span>+ Nova Tarefa</span>
+    </section>
+  );
 };

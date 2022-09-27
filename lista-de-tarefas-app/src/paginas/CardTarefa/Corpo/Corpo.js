@@ -1,5 +1,14 @@
 import React from "react";
+import { BotaoControle } from "./BotaoControle";
+import { Listagem } from "./Listagem/Listagem";
+import "./estilos.scss";
 
 export const Corpo = () => {
-  return <h1>Corpo</h1>;
+  return (
+    <article className="tarefa">
+      <h5 className="titulo">Tarefas</h5>
+      <BotaoControle />
+      <Listagem />
+    </article>
+  );
 };
