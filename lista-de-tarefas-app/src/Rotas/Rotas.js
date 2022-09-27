@@ -4,7 +4,7 @@ import { Login, CardTarefa } from "paginas";
 import { UsuarioContexto } from "contexto/Usuario";
 
 const Rotas = () => {
-  const [sessao, setSessao] = useState({ logado: true });
+  const [sessao, setSessao] = useState({ logado: false });
   return (
     <UsuarioContexto.Provider value={[sessao, setSessao]}>
       <Routes>
