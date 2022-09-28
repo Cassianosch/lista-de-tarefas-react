@@ -1,0 +1,62 @@
+@import "utils/estilos/cores.scss";
+
+.item {
+  background-color: $cor-branco;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px $cor-sombra-principal;
+  padding: 0.5rem 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .esquerda {
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 0.5rem;
+    }
+
+    .checkbox__fora {
+      position: relative;
+      width: 16px;
+      height: 16px;
+      label {
+        border: 1px solid $cor-background-principal;
+        background-color: $cor-branco;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        cursor: pointer;
+        &::after {
+          content: "";
+          border: 1px solid $cor-background-principal;
+          height: 3px;
+          width: 6px;
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          border-top: none;
+          border-right: none;
+          transform: rotate(-45deg);
+          opacity: 0;
+        }
+      }
+      input[type="checkbox"] {
+        visibility: hidden;
+        &:checked + label:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  img {
+    cursor: pointer;
+    transition: 0.3s all ease;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
