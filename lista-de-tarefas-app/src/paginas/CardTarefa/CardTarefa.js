@@ -5,10 +5,12 @@ import "./estilos.scss";
 
 const CardTarefa = () => {
   return (
-    <>
-      <Cabecalho />
-      <Corpo />
-    </>
+    <article className="card-tarefa">
+      <section className="card">
+        <Cabecalho />
+        <Corpo />
+      </section>
+    </article>
   );
 };
 
