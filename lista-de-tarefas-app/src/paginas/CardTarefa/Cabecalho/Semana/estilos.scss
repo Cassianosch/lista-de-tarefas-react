@@ -1,0 +1,35 @@
+@import 'utils/estilos/cores.scss';
+
+.semana {
+    .titulo {
+        background-color: $cor-box-sub-titulo;
+        padding: .4rem 1.5rem;
+        display: inline-block;
+        border-radius: 24px;
+        margin: 1rem 0;
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .dias {
+        display: flex;
+        justify-content: space-between;
+        overflow-y: scroll;
+        .dia {
+            background-color: $cor-background-card-dia;
+            margin-right: 1rem;
+            padding: 0 3.5rem;
+            border-radius: 16px;
+            height: 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            font-weight: 600;
+            user-select: none;
+            &.selecionado {
+                background-color: $cor-primaria;
+                color: $cor-branco;
+            }
+        }
+    }
+}
