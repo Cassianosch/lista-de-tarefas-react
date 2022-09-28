@@ -34,6 +34,46 @@ export const Semana = () => {
           <span className="dia__texto">Sáb</span>
           <span className="dia__numero">28</span>
         </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
+        <section className="dia">
+          <span className="dia__texto">Sáb</span>
+          <span className="dia__numero">28</span>
+        </section>
       </aside>
     </div>
   );
