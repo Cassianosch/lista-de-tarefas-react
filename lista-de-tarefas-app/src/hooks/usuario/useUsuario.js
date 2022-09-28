@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import jsonUsuario from "utils/usuario.json";
+import jsonUsuario from "utils/dados/usuario.json";
 import { UsuarioContexto } from "contexto/Usuario";
 
 const useUsuario = () => {

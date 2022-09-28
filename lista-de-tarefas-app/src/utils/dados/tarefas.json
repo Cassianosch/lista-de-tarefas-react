@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "titulo": "Estudar CSS",
+        "status": true
+    },
+    {
+        "id": 2,
+        "titulo": "Limpar a casa",
+        "status": false
+    },
+    {
+        "id": 3,
+        "titulo": "Lavar o carro",
+        "status": true
+    },
+    {
+        "id": 4,
+        "titulo": "Fazer post",
+        "status": false
+    }
+]

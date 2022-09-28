@@ -2,18 +2,22 @@ import React from "react";
 import "./estilos.scss";
 import icLixeira from "utils/imagem/ic-lixeira.svg";
 
-export const Item = ({ chaveCorrente }) => {
-  console.log(chaveCorrente);
+export const Item = ({ tarefa, removerTarefa }) => {
+  const { id, titulo, status } = tarefa;
   return (
     <div className="item">
       <div className="esquerda">
         <div className="checkbox__fora">
-          <input type="checkbox" id={`checkbox__${chaveCorrente}`} />
-          <label htmlFor={`checkbox__${chaveCorrente}`}></label>
+          <input type="checkbox" id={`checkbox__${id}`} />
+          <label htmlFor={`checkbox__${id}`}></label>
         </div>
-        <span className={true ? "text-line-through" : ""}>Estudar CSS</span>
+        <span className={status ? "text-line-through" : ""}>{titulo}</span>
       </div>
-      <img src={icLixeira} alt="Icone lixeira" />
+      <img
+        src={icLixeira}
+        alt="Icone lixeira"
+        onClick={() => removerTarefa(id)}
+      />
     </div>
   );
 };
