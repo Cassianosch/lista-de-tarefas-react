@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/lista-de-tarefas-react/static/css/main.13a9dda9.css",
+    "main.js": "/lista-de-tarefas-react/static/js/main.7dbfa65a.js",
+    "static/media/ic-lixeira.svg": "/lista-de-tarefas-react/static/media/ic-lixeira.78e1b360bca9c752db508df3afbe155a.svg",
+    "index.html": "/lista-de-tarefas-react/index.html",
+    "main.13a9dda9.css.map": "/lista-de-tarefas-react/static/css/main.13a9dda9.css.map",
+    "main.7dbfa65a.js.map": "/lista-de-tarefas-react/static/js/main.7dbfa65a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13a9dda9.css",
+    "static/js/main.7dbfa65a.js"
+  ]
+}
