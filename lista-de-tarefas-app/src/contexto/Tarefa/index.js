@@ -1,0 +1,1 @@
+export { TarefaContexto } from "./TarefaContexto";
