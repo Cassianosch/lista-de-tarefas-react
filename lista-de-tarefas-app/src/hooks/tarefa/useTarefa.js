@@ -6,11 +6,13 @@ const useTarefa = () => {
 
   const adicionarTarefa = (tarefaTitulo) => {
     let novaTarefa = {
-      id: tarefas.length + 1,
+      id: Math.floor(Math.random() * 10000000),
       titulo: tarefaTitulo,
       status: false,
     };
-    setTarefas([...tarefas, novaTarefa]);
+    let tarefasAtualizas = [...tarefas, novaTarefa];
+    setTarefas(tarefasAtualizas);
+    setarStorage(tarefasAtualizas);
   };
 
   const editarTarefa = (tarefa) => {
@@ -21,11 +23,17 @@ const useTarefa = () => {
       return tarefaLacoDeRepeticao;
     });
     setTarefas(tarefasAtualizas);
+    setarStorage(tarefasAtualizas);
   };
 
   const removerTarefa = (id) => {
     const tarefasAtualizas = tarefas.filter((tarefa) => tarefa.id !== id);
     setTarefas(tarefasAtualizas);
+    setarStorage(tarefasAtualizas);
+  };
+
+  const setarStorage = (tarefas) => {
+    localStorage.setItem("@programador.cs::tarefas", JSON.stringify(tarefas));
   };
 
   return {

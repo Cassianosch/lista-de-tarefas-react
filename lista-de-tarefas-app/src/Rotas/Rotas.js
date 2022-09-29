@@ -6,7 +6,11 @@ import jsonTarefas from "utils/dados/tarefas.json";
 
 const Rotas = () => {
   const [sessao, setSessao] = useState({ logado: false });
-  const [tarefas, setTarefas] = useState(jsonTarefas);
+
+  const tarefasNoJson = localStorage.getItem("@programador.cs::tarefas")
+    ? JSON.parse(localStorage.getItem("@programador.cs::tarefas"))
+    : jsonTarefas;
+  const [tarefas, setTarefas] = useState(tarefasNoJson);
   return (
     <UsuarioContexto.Provider value={[sessao, setSessao]}>
       <TarefaContexto.Provider value={[tarefas, setTarefas]}>

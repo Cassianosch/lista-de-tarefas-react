@@ -18,6 +18,11 @@ export const Item = (propriedades) => {
     editarTarefa(tarefaAtualizada);
   };
 
+  const handleRemoverElemento = () => {
+    removerTarefa(id);
+    setEditando(false);
+  };
+
   return (
     <div className="item">
       <div className="esquerda">
@@ -40,7 +45,7 @@ export const Item = (propriedades) => {
       <img
         src={icLixeira}
         alt="Icone lixeira"
-        onClick={() => removerTarefa(id)}
+        onClick={handleRemoverElemento}
       />
     </div>
   );

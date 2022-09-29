@@ -26,6 +26,10 @@ export const BotaoControle = ({ editando, setEditando }) => {
     if (editando?.titulo) {
       setValue("tarefa", editando.titulo);
       setMostrarInput(true);
+    } else {
+      setEditando(false);
+      setMostrarInput(false);
+      resetField("tarefa");
     }
   }, [editando, setValue]);
 
