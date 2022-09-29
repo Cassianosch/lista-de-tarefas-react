@@ -3,12 +3,12 @@ import "./estilos.scss";
 import { Item } from "./Item";
 import { useTarefa } from "hooks";
 
-export const Listagem = () => {
+export const Listagem = ({ setEditando }) => {
   const { tarefas } = useTarefa();
   return (
     <>
       {tarefas.map((tarefa) => (
-        <Item key={tarefa.id} {...tarefa} />
+        <Item key={tarefa.id} tarefa={tarefa} setEditando={setEditando} />
       ))}
     </>
   );

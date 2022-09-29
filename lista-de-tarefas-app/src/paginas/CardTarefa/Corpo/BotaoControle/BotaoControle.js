@@ -1,23 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./estilos.scss";
 import { useTarefa } from "hooks";
 import { useForm } from "react-hook-form";
 
-export const BotaoControle = () => {
+export const BotaoControle = ({ editando, setEditando }) => {
   const [mostrarInput, setMostrarInput] = useState(false);
 
-  const { adicionarTarefa } = useTarefa();
+  const { adicionarTarefa, editarTarefa } = useTarefa();
 
-  const { register, handleSubmit, resetField } = useForm();
+  const { register, handleSubmit, resetField, setValue } = useForm();
 
   const onSubmit = (data) => {
-    adicionarTarefa(data.tarefa);
+    if (editando?.titulo) {
+      editando.titulo = data.tarefa;
+      editando.status = false;
+      editarTarefa(editando);
+    } else {
+      adicionarTarefa(data.tarefa);
+    }
+    setEditando(false);
     resetField("tarefa");
   };
+
+  useEffect(() => {
+    if (editando?.titulo) {
+      setValue("tarefa", editando.titulo);
+      setMostrarInput(true);
+    }
+  }, [editando, setValue]);
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className={`caixa__botao ${mostrarInput ? "mostrar" : ""}`}
+      className={`caixa__botao ${mostrarInput || editando ? "mostrar" : ""}`}
     >
       <input type="text" {...register("tarefa", { required: true })} />
       <button type="submit" onClick={() => setMostrarInput(!mostrarInput)}>

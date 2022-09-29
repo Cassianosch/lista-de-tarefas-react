@@ -3,7 +3,10 @@ import "./estilos.scss";
 import icLixeira from "utils/imagem/ic-lixeira.svg";
 import { useTarefa } from "hooks";
 
-export const Item = ({ id, titulo, status }) => {
+export const Item = (propriedades) => {
+  const { tarefa, setEditando } = propriedades;
+  const { id, titulo, status } = tarefa;
+
   const { editarTarefa, removerTarefa } = useTarefa();
 
   const modificarStatus = () => {
@@ -22,12 +25,17 @@ export const Item = ({ id, titulo, status }) => {
           <input
             type="checkbox"
             id={`checkbox__${id}`}
-            defaultChecked={status}
+            checked={status}
             onChange={modificarStatus}
           />
           <label htmlFor={`checkbox__${id}`}></label>
         </div>
-        <span className={status ? "text-line-through" : ""}>{titulo}</span>
+        <span
+          className={status ? "text-line-through" : ""}
+          onClick={() => setEditando(tarefa)}
+        >
+          {titulo}
+        </span>
       </div>
       <img
         src={icLixeira}
