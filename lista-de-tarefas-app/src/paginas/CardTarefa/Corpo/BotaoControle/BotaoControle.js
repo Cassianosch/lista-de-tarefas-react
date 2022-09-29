@@ -20,6 +20,7 @@ export const BotaoControle = ({ editando, setEditando }) => {
     }
     setEditando(false);
     resetField("tarefa");
+    setMostrarInput(false);
   };
 
   useEffect(() => {

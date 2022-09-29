@@ -40,3 +40,15 @@
     align-items: center;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .caixa__botao {
+    height: unset;
+    &.mostrar {
+      grid-template-columns: 1fr;
+    }
+    button[type="submit"] {
+      height: 46px;
+    }
+  }
+}
