@@ -8,7 +8,7 @@ export const BotaoControle = ({ editando, setEditando }) => {
 
   const { adicionarTarefa, editarTarefa } = useTarefa();
 
-  const { register, handleSubmit, resetField, setValue } = useForm();
+  const { register, handleSubmit, resetField, setValue, setFocus } = useForm();
 
   const onSubmit = (data) => {
     if (editando?.titulo) {
@@ -27,6 +27,7 @@ export const BotaoControle = ({ editando, setEditando }) => {
     if (editando?.titulo) {
       setValue("tarefa", editando.titulo);
       setMostrarInput(true);
+      abrirInput();
     } else {
       setEditando(false);
       setMostrarInput(false);
@@ -34,13 +35,20 @@ export const BotaoControle = ({ editando, setEditando }) => {
     }
   }, [editando, setValue]);
 
+  const abrirInput = () => {
+    setMostrarInput(!mostrarInput);
+    setTimeout(() => {
+      setFocus("tarefa");
+    }, 150);
+  };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
       className={`caixa__botao ${mostrarInput || editando ? "mostrar" : ""}`}
     >
       <input type="text" {...register("tarefa", { required: true })} />
-      <button type="submit" onClick={() => setMostrarInput(!mostrarInput)}>
+      <button type="submit" onClick={abrirInput}>
         + Nova Tarefa
       </button>
     </form>
